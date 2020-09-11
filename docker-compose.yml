@@ -1,0 +1,8 @@
+version: '3'
+services:
+  quasar:
+    container_name: berlin
+    command: quasar --version
+    # restart: always
+    build: .
+    network_mode: host
