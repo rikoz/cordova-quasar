@@ -6,3 +6,6 @@ services:
     # restart: always
     build: .
     network_mode: host
+    volumes:
+      - ./:/app
+      -  /dev/bus/usb:/dev/bus/usb

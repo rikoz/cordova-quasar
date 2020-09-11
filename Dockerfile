@@ -24,7 +24,10 @@ RUN /bin/bash -c "source /root/.nvm/nvm.sh && nvm install $NODE_VERSION && nvm u
 RUN npm i -g --force yarn && yarn -v
 
 # Add Cordova
-RUN npm i -g --unsafe-perm cordova
+RUN npm i -g --unsafe-perm cordova && cordova -v
 
 # Add Quasar
 RUN npm i -g @quasar/cli
+
+# Make the 'app' folder the current working directory
+WORKDIR /app
