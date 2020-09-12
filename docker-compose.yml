@@ -2,7 +2,7 @@ version: '3'
 services:
   quasar:
     container_name: berlin
-    command: quasar --version
+    command: adb devices
     # restart: always
     build: .
     network_mode: host
